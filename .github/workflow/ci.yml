@@ -1,0 +1,35 @@
+name: Demo Node.js Ci Pipeline
+
+on:
+  push:
+    branches: 
+      - main
+  
+  pull_request:
+
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Check Out Code
+        uses: actions/checkout@v4
+    
+      - name: Setup Node Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+    
+      - name: Install All Dependency
+        run: npm install
+
+      - name: Lint Code
+        run: npm run lint
+
+      - name: Run Tests with Coverage
+        run: npm run test:coverage    
+    
+      - name: Build Check
+        run: npm run build

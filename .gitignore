@@ -1,0 +1,30 @@
+# Node modules (VERY important)
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Coverage reports (Vitest)
+coverage/
+
+# OS files
+.DS_Store
+
+# Editor files
+.vscode/
+
+# Optional: lock Docker runtime files
+*.pid
+
+# Optional: temporary files
+tmp/
+temp/
