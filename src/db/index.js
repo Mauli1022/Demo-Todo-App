@@ -8,9 +8,10 @@ export async function dbConnect(){
     try {
         const connectionInstance = await mongoose.connect(`${url}/${db_name}`);
         console.log("Database Connection Successfull"+connectionInstance.connection.host);
+        return connectionInstance; 
         
     } catch (error) {
         console.error("Something Went Wrong While Connectino to Database:"+error.message);
-        process.exit(1);
+        throw error
     }
 }

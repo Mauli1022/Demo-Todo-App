@@ -6,4 +6,4 @@ const app = express();
 
 
 
-export { app };
+export default app ;
