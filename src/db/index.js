@@ -12,6 +12,6 @@ export async function dbConnect(){
         
     } catch (error) {
         console.error("Something Went Wrong While Connectino to Database:"+error.message);
-        throw error
+        throw error;
     }
 }
