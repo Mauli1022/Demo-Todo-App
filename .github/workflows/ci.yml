@@ -6,10 +6,13 @@ on:
       - main
   
   pull_request:
+    branches:
+      - main
 
 
 jobs:
   ci:
+    name: CI Checks
     runs-on: ubuntu-latest
 
     steps: 
